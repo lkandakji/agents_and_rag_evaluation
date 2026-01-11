@@ -1,23 +1,13 @@
-# AI Agent Evaluation Techniques
+# Evaluation Techniques for Agent and RAG pipelines
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/) [![Made with LangChain](https://img.shields.io/badge/Made%20with-LangChain-red.svg)](https://www.langchain.com/) [![Powered by LangSmith](https://img.shields.io/badge/Powered%20by-LangSmith-orange.svg)](https://smith.langchain.com/) [![Read on Medium](https://img.shields.io/badge/Read_on-Medium-black.svg?logo=medium)](https://medium.com/@fareedkhandev/implementing-12-ai-agent-evaluation-techniques-using-langsmith-507d5bf5c0aa)
-
-This repository provides a comprehensive, hands-on guide to 12 different techniques for evaluating AI Agents and Retrieval-Augmented Generation (RAG) systems. Each technique is implemented in a runnable Jupyter Notebook, demonstrating practical application using industry-standard tools like LangChain and LangSmith.
-
-#### For Step by Step explanation of all the techniques, check out the [Medium article](https://medium.com/@fareedkhandev/implementing-12-ai-agent-evaluation-techniques-using-langsmith-507d5bf5c0aa).
-
-Evaluating LLM-powered systems is notoriously difficult. Unlike traditional software with deterministic outputs, the performance of AI agents can be nuanced and hard to measure. Key challenges include:
+This repo provides a guide to 12 different techniques for evaluating AI Agents and Retrieval-Augmented Generation (RAG) systems. Each technique is implemented in a runnable Jupyter Notebook, with practical application on industry-standard tools like LangChain and LangSmith. Key challenges targeted include:
 
 *   **Unstructured Outputs:** How do you score a free-form text answer that can be phrased in many correct ways?
-*   **Multi-Step Reasoning:** How do you evaluate an agent's decision-making process, not just its final answer?
+*   **Multi-Step Reasoning:** How do you evaluate an agent's decision-making process rather than just its final answer?
 *   **Dynamic Data:** How do you test a system whose "correct" answers change over time?
 *   **Subjective Quality:** How do you measure qualitative aspects like "helpfulness," "conciseness," or "faithfulness" to a source?
 
-This repository tackles these challenges by providing clear, practical examples of modern evaluation strategies.
-
-## 🧪 Table of Evaluation Techniques
-
-This repository is structured as a series of tutorials, with each notebook focusing on a specific evaluation technique.
+## Table of Evaluation Techniques
 
 | #  | Technique                                 | Description                                                                                                                              | Notebook                                                                      |
 |----|-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -40,21 +30,14 @@ Follow these steps to run the notebooks locally and experiment with the evaluati
 
 ### 1. Clone the Repository
 
-```bash
-git clone https://github.com/your-username/ai-agents-eval-techniques.git
-cd ai-agents-eval-techniques
-```
-
 ### 2. Install Dependencies
-
-It is recommended to create a virtual environment to manage dependencies.
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 ```
 
-Install the required packages. A `requirements.txt` is not provided, but you can install all necessary dependencies with the following command:
+Install the required packages with the following command:
 
 ```bash
 pip install langchain langchain_openai langchain_experimental langsmith langgraph openai anthropic pandas chromadb lxml html2text jsonschema ragas numpy textstat requests
@@ -81,11 +64,7 @@ LANGCHAIN_HUB_API_URL="https://api.hub.langchain.com"
 LANGCHAIN_HUB_API_KEY="YOUR_LANGCHAIN_HUB_API_KEY"
 ```
 
-The notebooks will automatically load these variables.
-
 ### 4. Run the Notebooks
-
-Launch Jupyter Notebook or JupyterLab and navigate through the numbered notebooks to explore each evaluation technique.
 
 ```bash
 jupyter lab
@@ -98,18 +77,3 @@ jupyter lab
 *   [**LangGraph**](https://langchain-ai.github.io/langgraph/): Used in the simulation example to create stateful, multi-actor applications.
 *   **OpenAI & Anthropic Models**: The primary LLMs used as reasoning engines for the agents and as judges for evaluation.
 *   **RAGAS**: A specialized, open-source framework for in-depth RAG evaluation.
-
-## Contributing
-
-Contributions are welcome! If you have an idea for a new evaluation technique, an improvement to an existing one, or find a bug, please feel free to open an issue or submit a pull request.
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature/your-feature-name`).
-3.  Make your changes.
-4.  Commit your changes (`git commit -m 'Add some feature'`).
-5.  Push to the branch (`git push origin feature/your-feature-name`).
-6.  Open a Pull Request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
